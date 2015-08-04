@@ -13,4 +13,8 @@ describe('Array#queen_attack?') do
   it('is true when y coordinates match') do
     expect([1,3].queen_attack?([9,3])).to(eq(true))
   end
+  
+  it('is true when absolute value of respective x and y coordinates subtracted from each other are equal.') do
+    expect([4,9].queen_attack?([1,12])).to(eq(true))
+  end
 end
